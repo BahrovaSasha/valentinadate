@@ -45,7 +45,7 @@ gulp.task('scripts', ['common-js'], function() {
 	.pipe(browserSync.reload({stream: true}));
 });
 
-var notify = require( 'gulp-notify' );
+
 
 // gulp.task( 'sass', function()
 // {

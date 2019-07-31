@@ -53,7 +53,7 @@ body
 	overflow-x: hidden
 	background-color: #fff
 	position: relative
-	color: #000
+	color: $text-color
 	font-family: $default-font
 	margin: 0
 	a
@@ -63,7 +63,8 @@ body
   img
     max-width: 100%
     height: auto
-
+.logo-svg
+	display: none
 h1, h3, p
 	margin: 0
 
@@ -71,4 +72,81 @@ button
 	cursor: pointer
 	&:focus
 		outline: none
+.main-header
+	display: none
+.main-section
+	background-color: $accent-color
+	color: #fff
+	height: 100vh
+	width: 100%
+	text-align: center
+	overflow: hidden
+	.main-section-info
+		height: 100%
+	.logo-wrap
+		width: 44rem
+		fill: #fff
+		margin: 0 auto
+
+.h1
+	font-family: $items-font
+	font-size: 3.8rem
+	letter-spacing: 4px
+.discover-button
+	font-size: 2.4rem
+	font-family: $bold-font
+	text-align: center
+	color: #fff
+	line-height: 1.2
+	letter-spacing: 2px
+	padding-bottom: 1rem
+	i
+		font-size: 1.6rem
+.section-wrap
+	padding-bottom: 1rem
+	width: 80%
+	min-height: 100vh
+	margin: 0 auto
+.services-section
+	padding-top: 20vh
+.h2
+	color: $accent-color
+	line-height: normal
+	font-family: $items-font
+	font-size: 3.8rem
+.services-items,
+.achievements-items
+	width: 100%
+	height: 80vh
+	padding: 2rem 0
+.one-service,
+.one-couple
+	text-align: center
+	color: $accent-color
+	font-family: $items-font
+	font-size: 2.4rem
+	line-height: 1.5
+	padding: 1rem 1.5rem
+	.circle-wrap
+		background-color: transparent
+		border-radius: 50%
+		width: 24rem
+		height: 24rem
+		margin: 0 auto
+	&:hover
+		color: #fff
+		.circle-wrap
+			background-color: rgba(255, 91, 81, .8)
+	&:active
+		.circle-wrap
+			background-color: $accent-color
+	.service-icon
+		width: 5rem
+		height: 5rem
+.item-name
+	padding: 1rem 0
+.one-couple_photo
+	height: 36rem
+	background-color: #ccc
+
 
