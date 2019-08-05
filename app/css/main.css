@@ -2011,6 +2011,13 @@ body {
 h1, h3, p {
   margin: 0; }
 
+ul {
+  margin-left: 0;
+  padding-left: 0; }
+
+li {
+  list-style-type: none; }
+
 button {
   cursor: pointer; }
   button:focus {
@@ -2084,9 +2091,15 @@ button {
           -webkit-transition: .3s linear;
           -o-transition: .3s linear;
           transition: .3s linear; }
-  .main-header .burger-menu.open .burger-inner {
+
+.main-header.open-menu {
+  background-color: transparent;
+  color: #fff; }
+  .main-header.open-menu .logo-wrap svg {
+    fill: #fff; }
+  .main-header.open-menu .burger-menu .burger-inner {
     background: 0 0; }
-    .main-header .burger-menu.open .burger-inner:before {
+    .main-header.open-menu .burger-menu .burger-inner:before {
       -webkit-transform: rotate(-45deg);
           -ms-transform: rotate(-45deg);
               transform: rotate(-45deg);
@@ -2095,7 +2108,7 @@ button {
       -o-transition: .3s linear;
       transition: .3s linear;
       background-color: #fff; }
-    .main-header .burger-menu.open .burger-inner:after {
+    .main-header.open-menu .burger-menu .burger-inner:after {
       -webkit-transform: rotate(45deg);
           -ms-transform: rotate(45deg);
               transform: rotate(45deg);
@@ -2105,16 +2118,28 @@ button {
       transition: .3s linear;
       background-color: #fff; }
 
-.menu-open {
-  display: none;
+.menu-open-items {
   z-index: 99;
-  position: absolute;
+  position: fixed;
   background-color: #FF5B51;
   color: #fff;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  text-align: center; }
+  .menu-open-items ul {
+    height: 100%; }
+    .menu-open-items ul .menu-item {
+      color: #fff;
+      font-family: "oswald-regular";
+      font-size: 3.8rem; }
+  .menu-open-items .social-links {
+    padding: 2rem; }
+    .menu-open-items .social-links a {
+      padding: 0 2rem;
+      color: #fff;
+      font-size: 2.4rem; }
 
 section {
   min-height: 80rem;

@@ -69,7 +69,11 @@ body
 	display: none
 h1, h3, p
 	margin: 0
-
+ul
+	margin-left: 0
+	padding-left: 0
+li
+	list-style-type: none
 button
 	cursor: pointer
 	&:focus
@@ -140,7 +144,13 @@ button
 					transition: .3s linear
 					//transition: bottom .08s ease-out 0s,top .08s ease-out 0s,opacity 0s linear
 					//transition-property: transform
-	.burger-menu.open
+.main-header.open-menu
+	background-color: transparent
+	color: #fff
+	.logo-wrap
+		svg
+			fill: #fff
+	.burger-menu
 		.burger-inner
 			background: 0 0
 			&:before
@@ -153,16 +163,30 @@ button
 				top: 50%
 				transition: .3s linear
 				background-color: #fff
-.menu-open
-	display: none
+.menu-open-items
+	//display: none
 	z-index: 99
-	position: absolute
+	position: fixed
 	background-color: $accent-color
 	color: #fff
 	top: 0
 	right: 0
 	bottom: 0
 	left: 0
+	text-align: center
+	ul
+		height: 100%
+		.menu-item
+			color: #fff
+			font-family: $items-font
+			font-size: 3.8rem
+	.social-links
+		padding: 2rem
+		a
+			padding: 0 2rem
+			color: #fff
+			font-size: 2.4rem
+
 
 
 
