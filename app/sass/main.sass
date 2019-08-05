@@ -35,7 +35,7 @@
 input,textarea
 	border: none
 	font-family: $default-font
-	font-size: 1.4rem
+	font-size: 1.6rem
 	outline: none
 textarea
 	resize: none
@@ -75,7 +75,99 @@ button
 	&:focus
 		outline: none
 .main-header
+	position: fixed
+	width: 100%
+	top: 0
+	right: 0
+	left: 0
+	background-color: #fff
+	color: $accent-color
+	height: 10rem
+	padding: 0 2rem
+	z-index: 100
+	.logo-wrap
+		height: 8rem
+		width: 20rem
+		//position: relative
+		svg
+			fill: $accent-color
+			//position: absolute
+			height: 100%
+			width: inherit
+	.phone
+		font-size: 2.4rem
+		line-height: normal
+		padding: 0 2rem
+	.burger-menu
+		overflow: visible
+		margin: 0
+		padding: 1rem
+		transition: .3s linear
+		border: none
+		background-color: transparent
+		.burger-box
+			position: relative
+			display: inline-block
+			width: 4rem
+			height: 2.4rem
+			.burger-inner
+				position: absolute
+				width: 100%
+				height: 2px
+				transition: .3s linear
+				background-color: $accent-color
+				top: 50%
+				display: block
+				&:before
+					content: ''
+					display: block
+					position: absolute
+					width: 100%
+					height: 2px
+					top: -1rem
+					background-color: $accent-color
+					transition: .3s linear
+					//transition: bottom .08s ease-out 0s,top .08s ease-out 0s,opacity 0s linear
+					//transition-property: transform
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					background-color: $accent-color
+					width: 100%
+					height: 2px
+					bottom: -1rem
+					transition: .3s linear
+					//transition: bottom .08s ease-out 0s,top .08s ease-out 0s,opacity 0s linear
+					//transition-property: transform
+	.burger-menu.open
+		.burger-inner
+			background: 0 0
+			&:before
+				transform: rotate(-45deg)
+				top: 50%
+				transition: .3s linear
+				background-color: #fff
+			&:after
+				transform: rotate(45deg)
+				top: 50%
+				transition: .3s linear
+				background-color: #fff
+.menu-open
 	display: none
+	z-index: 99
+	position: absolute
+	background-color: $accent-color
+	color: #fff
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+
+
+
+
+
 
 section
 	min-height: 80rem
@@ -114,7 +206,7 @@ section
 	//min-height: 100vh
 	margin: 0 auto
 .services-section
-	padding-top: 20vh
+	//padding-top: 20vh
 .h2
 	color: $accent-color
 	line-height: normal
@@ -198,6 +290,7 @@ section
 	text-align: center
 	color: $accent-color
 	font-size: 2.4rem
+	padding: 2rem 0 0
 	p
 		padding: 2rem 0
 		line-height: 1.5
@@ -211,12 +304,16 @@ section
 	background-color: $accent-color
 	width: 100%
 	color: #fff
+	padding: 4rem 0
 .contact-us-form
 	max-width: 30rem
 	width: 96%
+.error-message
+	color: $text-color
 .contact-us-field
-	height: 4rem
-	//margin-bottom: 2rem
+	//height: 4rem
+	margin-bottom: 2rem
+	height: 48px
 .contact-us-textarea
 	height: 6rem
 

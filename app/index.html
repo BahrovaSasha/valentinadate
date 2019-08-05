@@ -60,14 +60,25 @@
 </g>
     </symbol>
 </svg>
-<header class="main-header">
+<header class="main-header d-flex align-items-center justify-content-between ">
     <div class="logo-wrap">
-        <img src="img/logo_valentinadate.svg">
+        <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+        </svg>
     </div>
-    <div class="main-header_right">
-
+    <div class="main-header_right d-flex align-items-center">
+        <a class="phone">+38(097) 123 45 67</a>
+        <button type="button" class="burger-menu" id="burger">
+            <span class="burger-box">
+                <span class="burger-inner"></span>
+            </span>
+        </button>
     </div>
 </header>
+
+<div class="menu-open">
+
+</div>
 
 <main>
     <section class="main-section d-flex align-items-center justify-content-between flex-column" scroll="no">
@@ -200,7 +211,7 @@
         <div class="contact-us-form-wrap d-flex align-items-center flex-column">
             <p>Leave your message and we will contact you within 24 hours</p>
             <form class="contact-us-form">
-                <span class="error-message">hgkdkll</span>
+                <span class="error-message"></span>
                 <div class="contact-us-field">
                     <input type="text" class="contact-us-input" placeholder="Name">
                 </div>

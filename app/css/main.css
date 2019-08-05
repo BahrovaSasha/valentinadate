@@ -1972,7 +1972,7 @@ html {
 input, textarea {
   border: none;
   font-family: "oswald-light";
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   outline: none; }
 
 textarea {
@@ -2017,7 +2017,104 @@ button {
     outline: none; }
 
 .main-header {
-  display: none; }
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  color: #FF5B51;
+  height: 10rem;
+  padding: 0 2rem;
+  z-index: 100; }
+  .main-header .logo-wrap {
+    height: 8rem;
+    width: 20rem; }
+    .main-header .logo-wrap svg {
+      fill: #FF5B51;
+      height: 100%;
+      width: inherit; }
+  .main-header .phone {
+    font-size: 2.4rem;
+    line-height: normal;
+    padding: 0 2rem; }
+  .main-header .burger-menu {
+    overflow: visible;
+    margin: 0;
+    padding: 1rem;
+    -webkit-transition: .3s linear;
+    -o-transition: .3s linear;
+    transition: .3s linear;
+    border: none;
+    background-color: transparent; }
+    .main-header .burger-menu .burger-box {
+      position: relative;
+      display: inline-block;
+      width: 4rem;
+      height: 2.4rem; }
+      .main-header .burger-menu .burger-box .burger-inner {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        -webkit-transition: .3s linear;
+        -o-transition: .3s linear;
+        transition: .3s linear;
+        background-color: #FF5B51;
+        top: 50%;
+        display: block; }
+        .main-header .burger-menu .burger-box .burger-inner:before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          top: -1rem;
+          background-color: #FF5B51;
+          -webkit-transition: .3s linear;
+          -o-transition: .3s linear;
+          transition: .3s linear; }
+        .main-header .burger-menu .burger-box .burger-inner:after {
+          content: '';
+          display: block;
+          position: absolute;
+          background-color: #FF5B51;
+          width: 100%;
+          height: 2px;
+          bottom: -1rem;
+          -webkit-transition: .3s linear;
+          -o-transition: .3s linear;
+          transition: .3s linear; }
+  .main-header .burger-menu.open .burger-inner {
+    background: 0 0; }
+    .main-header .burger-menu.open .burger-inner:before {
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      top: 50%;
+      -webkit-transition: .3s linear;
+      -o-transition: .3s linear;
+      transition: .3s linear;
+      background-color: #fff; }
+    .main-header .burger-menu.open .burger-inner:after {
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+      top: 50%;
+      -webkit-transition: .3s linear;
+      -o-transition: .3s linear;
+      transition: .3s linear;
+      background-color: #fff; }
+
+.menu-open {
+  display: none;
+  z-index: 99;
+  position: absolute;
+  background-color: #FF5B51;
+  color: #fff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
 
 section {
   min-height: 80rem;
@@ -2057,9 +2154,6 @@ section {
   padding-bottom: 1rem;
   width: 80%;
   margin: 0 auto; }
-
-.services-section {
-  padding-top: 20vh; }
 
 .h2 {
   color: #FF5B51;
@@ -2157,7 +2251,8 @@ section {
 .contact-us-section {
   text-align: center;
   color: #FF5B51;
-  font-size: 2.4rem; }
+  font-size: 2.4rem;
+  padding: 2rem 0 0; }
   .contact-us-section p {
     padding: 2rem 0;
     line-height: 1.5; }
@@ -2171,14 +2266,19 @@ section {
 .contact-us-form-wrap {
   background-color: #FF5B51;
   width: 100%;
-  color: #fff; }
+  color: #fff;
+  padding: 4rem 0; }
 
 .contact-us-form {
   max-width: 30rem;
   width: 96%; }
 
+.error-message {
+  color: #323232; }
+
 .contact-us-field {
-  height: 4rem; }
+  margin-bottom: 2rem;
+  height: 48px; }
 
 .contact-us-textarea {
   height: 6rem; }
