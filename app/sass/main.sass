@@ -54,7 +54,7 @@ body
 	line-height: 2
 	overflow-x: hidden
 	background-color: #fff
-	position: relative
+	//position: relative
 	color: $text-color
 	font-family: $default-font
 	margin: 0
@@ -65,6 +65,10 @@ body
   img
     max-width: 100%
     height: auto
+.fixed
+	position: fixed
+	overflow-y: hidden
+	width: 100%
 .logo-svg
 	display: none
 h1, h3, p
@@ -78,30 +82,53 @@ button
 	cursor: pointer
 	&:focus
 		outline: none
+
+.preloader
+	background-color: #fff
+	z-index: 1000
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	display: flex
+	.logo-wrap
+		width: 60rem
+		height: 40rem
+		animation: opacity 2s infinite
+		svg
+			width: 100%
+			height: 100%
+			fill: $accent-color
+
+@keyframes opacity
+	0%
+		opacity: 0
+	50%
+		opacity: 1
+	100%
+		opacity: 0
+
 .main-header
 	position: fixed
 	width: 100%
 	top: 0
 	right: 0
 	left: 0
-	background-color: #fff
-	color: $accent-color
+	background-color: transparent
+	color: #fff
 	height: 10rem
 	padding: 0 2rem
 	z-index: 100
 	.logo-wrap
+		display: block
 		height: 8rem
 		width: 20rem
-		//position: relative
-		svg
-			fill: $accent-color
-			//position: absolute
-			height: 100%
-			width: inherit
+		visibility: hidden
 	.phone
 		font-size: 2.4rem
 		line-height: normal
-		padding: 0 2rem
+		padding: 0 4rem
 	.burger-menu
 		overflow: visible
 		margin: 0
@@ -119,7 +146,7 @@ button
 				width: 100%
 				height: 2px
 				transition: .3s linear
-				background-color: $accent-color
+				background-color: #fff
 				top: 50%
 				display: block
 				&:before
@@ -129,7 +156,7 @@ button
 					width: 100%
 					height: 2px
 					top: -1rem
-					background-color: $accent-color
+					background-color: #fff
 					transition: .3s linear
 					//transition: bottom .08s ease-out 0s,top .08s ease-out 0s,opacity 0s linear
 					//transition-property: transform
@@ -137,17 +164,40 @@ button
 					content: ''
 					display: block
 					position: absolute
-					background-color: $accent-color
+					background-color: #fff
 					width: 100%
 					height: 2px
 					bottom: -1rem
 					transition: .3s linear
 					//transition: bottom .08s ease-out 0s,top .08s ease-out 0s,opacity 0s linear
 					//transition-property: transform
-.main-header.open-menu
+
+.main-header.active
+	background-color: transparent
+	color: $accent-color
+	.logo-wrap
+		visibility: visible
+		//position: relative
+		svg
+			fill: $accent-color
+			//position: absolute
+			height: 100%
+			width: inherit
+	.burger-menu
+		.burger-box
+			.burger-inner
+				background-color: $accent-color
+				&:before
+					background-color: $accent-color
+				&:after
+					background-color: $accent-color
+
+.main-header.open-menu,
+.main-header.active.open-menu
 	background-color: transparent
 	color: #fff
 	.logo-wrap
+		visibility: visible
 		svg
 			fill: #fff
 	.burger-menu
@@ -163,8 +213,10 @@ button
 				top: 50%
 				transition: .3s linear
 				background-color: #fff
+
 .menu-open-items
-	//display: none
+	display: none
+	opacity: 0
 	z-index: 99
 	position: fixed
 	background-color: $accent-color
@@ -174,6 +226,7 @@ button
 	bottom: 0
 	left: 0
 	text-align: center
+	transition: .3s linear
 	ul
 		height: 100%
 		.menu-item
@@ -186,14 +239,23 @@ button
 			padding: 0 2rem
 			color: #fff
 			font-size: 2.4rem
-
-
-
-
+	.lang
+		position: absolute
+		color: #fff
+		font-size: 2.4rem
+		padding: 2rem
+		bottom: 0
+		left: 0
+		span
+			padding: 0 1rem
+.menu-open-items.active
+	display: flex
+	opacity: 1
 
 
 
 section
+	height: 100vh
 	min-height: 80rem
 	padding: 2rem 0
 .main-section
@@ -217,6 +279,8 @@ section
 .discover-button
 	font-size: 2.4rem
 	font-family: $bold-font
+	background: transparent
+	border: none
 	text-align: center
 	color: #fff
 	line-height: 1.2

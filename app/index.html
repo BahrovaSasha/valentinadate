@@ -10,11 +10,7 @@
     <link rel="apple-touch-icon-precomposed" href="">
 </head>
 <body>
-<!--
-<div class="preloader">
 
-</div>
--->
 <svg class="logo-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      style="enable-background: 0 0 72 38;" xml:space="preserve">
     <symbol id="logo" viewBox="0 0 72 38">
@@ -60,7 +56,14 @@
 </g>
     </symbol>
 </svg>
-<header class="main-header open-menu d-flex align-items-center justify-content-between ">
+<div class="preloader align-items-center justify-content-center">
+    <div class="logo-wrap">
+        <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+        </svg>
+    </div>
+</div>
+<header class="main-header d-flex align-items-center justify-content-between ">
     <div class="logo-wrap">
         <svg>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
@@ -74,24 +77,25 @@
             </span>
         </button>
     </div>
+
 </header>
 
-<div class="menu-open-items d-flex flex-column align-items-center justify-content-between">
+<div class="menu-open-items flex-column align-items-center justify-content-between">
     <ul class="d-flex flex-column justify-content-center">
         <li>
-            <a href="" class="menu-item">Services</a>
+            <a href="#services" class="menu-item">Services</a>
         </li>
         <li>
-            <a href="" class="menu-item">Achievements</a>
+            <a href="#achievements" class="menu-item">Achievements</a>
         </li>
         <li>
-            <a href="" class="menu-item">Blog</a>
+            <a href="#blog" class="menu-item">Blog</a>
         </li>
         <li>
-            <a href="" class="menu-item">About Us</a>
+            <a href="#about" class="menu-item">About Us</a>
         </li>
         <li>
-            <a href="" class="menu-item">Contact Us</a>
+            <a href="#contact" class="menu-item">Contact Us</a>
         </li>
     </ul>
     <div class="social-links d-flex align-items-center justify-content-center">
@@ -99,10 +103,14 @@
         <a href="">Instagram</a>
         <a href="">Youtube</a>
     </div>
+    <div class="lang">
+        <span>En</span>
+        <span>Es</span>
+    </div>
 </div>
 
 <main>
-    <section class="main-section d-flex align-items-center justify-content-between flex-column" scroll="no">
+    <section class="main-section d-flex align-items-center justify-content-between flex-column">
         <div class="main-section-info d-flex justify-content-center align-items-center flex-column">
             <div class="logo-wrap">
                 <svg>
@@ -112,7 +120,7 @@
             <span class="h1">Executive personal matchmaking agency</span>
         </div>
 
-        <a href="#services" class="discover-button">Discover<br><i class="fas fa-heart"></i></a>
+        <button type="button" class="discover-button">Discover<br><i class="fas fa-heart"></i></button>
     </section>
 
     <section class="services-section section-wrap d-flex flex-column align-items-center justify-content-center" id="services">
@@ -140,9 +148,15 @@
 
     </section>
 
-    <section class="achievements-section section-wrap d-flex flex-column align-items-center justify-content-center">
+    <section class="achievements-section section-wrap d-flex flex-column align-items-center justify-content-center" id="achievements">
         <span class="h2">Achievements Successfull Couples</span>
         <div class="achievements-items row">
+            <div class="one-couple col-md-4">
+                <div class="one-couple_photo">
+                    <img src="" alt="couple">
+                </div>
+                <p class="item-name">Donny and Oksana</p>
+            </div>
             <div class="one-couple col-md-4">
                 <div class="one-couple_photo">
                     <img src="" alt="couple">
@@ -164,11 +178,16 @@
         </div>
     </section>
 
-    <section class="about-us-section">
+    <section class="about-us-section" id="about">
         <div class="section-wrap d-flex flex-column align-items-center justify-content-center">
             <span class="h2">About Us</span>
             <p>We are here to help you to find your love and your soul mate. UkrainianRealBrides.com is a child of a group of people who were trying different kinds of dating websites to meet that special person. Moreover we know all the positive and negative sides of internet dating, because we have rich experience in matchmaking and online dating.</p>
             <div class="about-us-items row">
+                <div class="about-us-one-item col-md-4">
+                    <div class="about-us-video">
+                        <iframe></iframe>
+                    </div>
+                </div>
                 <div class="about-us-one-item col-md-4">
                     <div class="about-us-video">
                         <iframe></iframe>
@@ -192,7 +211,7 @@
         </div>
     </section>
 
-    <section class="blog-section section-wrap d-flex align-items-center flex-column justify-content-center">
+    <section class="blog-section section-wrap d-flex align-items-center flex-column justify-content-center" id="blog">
         <span class="h2">Blog</span>
         <div class="main-article-wrap">
             <span class="article-header">Header of the article</span>
@@ -216,10 +235,15 @@
                 <span class="article-header">Header of the article</span>
                 <a href="" class="read-button">Read more</a>
             </div>
+            <div class="article-item col-md-4 d-flex flex-column">
+                <div class="article-image"></div>
+                <span class="article-header">Header of the article</span>
+                <a href="" class="read-button">Read more</a>
+            </div>
         </div>
     </section>
 
-    <section class="contact-us-section d-flex align-items-center flex-column justify-content-center">
+    <section class="contact-us-section d-flex align-items-center flex-column justify-content-center" id="contact">
         <span class="h2">Contact us</span>
         <p>Do you feel that it’s time for you to meet your future life partner?<br>Helping you is our job</p>
         <a href="">Valentinadate@mail.com</a>
@@ -260,6 +284,6 @@
 
 
 <script type="text/javascript" src="js\scripts.min.js"></script>
-<!--<script type="text/javascript" src="js\common.js"></script>-->
+<script type="text/javascript" src="js\common.js"></script>
 </body>
 </html>

@@ -1993,7 +1993,6 @@ body {
   line-height: 2;
   overflow-x: hidden;
   background-color: #fff;
-  position: relative;
   color: #323232;
   font-family: "oswald-light";
   margin: 0; }
@@ -2004,6 +2003,11 @@ body {
     body a img {
       max-width: 100%;
       height: auto; }
+
+.fixed {
+  position: fixed;
+  overflow-y: hidden;
+  width: 100%; }
 
 .logo-svg {
   display: none; }
@@ -2023,28 +2027,64 @@ button {
   button:focus {
     outline: none; }
 
+.preloader {
+  background-color: #fff;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .preloader .logo-wrap {
+    width: 60rem;
+    height: 40rem;
+    -webkit-animation: opacity 2s infinite;
+            animation: opacity 2s infinite; }
+    .preloader .logo-wrap svg {
+      width: 100%;
+      height: 100%;
+      fill: #FF5B51; }
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes opacity {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
 .main-header {
   position: fixed;
   width: 100%;
   top: 0;
   right: 0;
   left: 0;
-  background-color: #fff;
-  color: #FF5B51;
+  background-color: transparent;
+  color: #fff;
   height: 10rem;
   padding: 0 2rem;
   z-index: 100; }
   .main-header .logo-wrap {
+    display: block;
     height: 8rem;
-    width: 20rem; }
-    .main-header .logo-wrap svg {
-      fill: #FF5B51;
-      height: 100%;
-      width: inherit; }
+    width: 20rem;
+    visibility: hidden; }
   .main-header .phone {
     font-size: 2.4rem;
     line-height: normal;
-    padding: 0 2rem; }
+    padding: 0 4rem; }
   .main-header .burger-menu {
     overflow: visible;
     margin: 0;
@@ -2066,7 +2106,7 @@ button {
         -webkit-transition: .3s linear;
         -o-transition: .3s linear;
         transition: .3s linear;
-        background-color: #FF5B51;
+        background-color: #fff;
         top: 50%;
         display: block; }
         .main-header .burger-menu .burger-box .burger-inner:before {
@@ -2076,7 +2116,7 @@ button {
           width: 100%;
           height: 2px;
           top: -1rem;
-          background-color: #FF5B51;
+          background-color: #fff;
           -webkit-transition: .3s linear;
           -o-transition: .3s linear;
           transition: .3s linear; }
@@ -2084,7 +2124,7 @@ button {
           content: '';
           display: block;
           position: absolute;
-          background-color: #FF5B51;
+          background-color: #fff;
           width: 100%;
           height: 2px;
           bottom: -1rem;
@@ -2092,14 +2132,37 @@ button {
           -o-transition: .3s linear;
           transition: .3s linear; }
 
-.main-header.open-menu {
+.main-header.active {
+  background-color: transparent;
+  color: #FF5B51; }
+  .main-header.active .logo-wrap {
+    visibility: visible; }
+    .main-header.active .logo-wrap svg {
+      fill: #FF5B51;
+      height: 100%;
+      width: inherit; }
+  .main-header.active .burger-menu .burger-box .burger-inner {
+    background-color: #FF5B51; }
+    .main-header.active .burger-menu .burger-box .burger-inner:before {
+      background-color: #FF5B51; }
+    .main-header.active .burger-menu .burger-box .burger-inner:after {
+      background-color: #FF5B51; }
+
+.main-header.open-menu,
+.main-header.active.open-menu {
   background-color: transparent;
   color: #fff; }
-  .main-header.open-menu .logo-wrap svg {
-    fill: #fff; }
-  .main-header.open-menu .burger-menu .burger-inner {
+  .main-header.open-menu .logo-wrap,
+  .main-header.active.open-menu .logo-wrap {
+    visibility: visible; }
+    .main-header.open-menu .logo-wrap svg,
+    .main-header.active.open-menu .logo-wrap svg {
+      fill: #fff; }
+  .main-header.open-menu .burger-menu .burger-inner,
+  .main-header.active.open-menu .burger-menu .burger-inner {
     background: 0 0; }
-    .main-header.open-menu .burger-menu .burger-inner:before {
+    .main-header.open-menu .burger-menu .burger-inner:before,
+    .main-header.active.open-menu .burger-menu .burger-inner:before {
       -webkit-transform: rotate(-45deg);
           -ms-transform: rotate(-45deg);
               transform: rotate(-45deg);
@@ -2108,7 +2171,8 @@ button {
       -o-transition: .3s linear;
       transition: .3s linear;
       background-color: #fff; }
-    .main-header.open-menu .burger-menu .burger-inner:after {
+    .main-header.open-menu .burger-menu .burger-inner:after,
+    .main-header.active.open-menu .burger-menu .burger-inner:after {
       -webkit-transform: rotate(45deg);
           -ms-transform: rotate(45deg);
               transform: rotate(45deg);
@@ -2119,6 +2183,8 @@ button {
       background-color: #fff; }
 
 .menu-open-items {
+  display: none;
+  opacity: 0;
   z-index: 99;
   position: fixed;
   background-color: #FF5B51;
@@ -2127,7 +2193,10 @@ button {
   right: 0;
   bottom: 0;
   left: 0;
-  text-align: center; }
+  text-align: center;
+  -webkit-transition: .3s linear;
+  -o-transition: .3s linear;
+  transition: .3s linear; }
   .menu-open-items ul {
     height: 100%; }
     .menu-open-items ul .menu-item {
@@ -2140,8 +2209,25 @@ button {
       padding: 0 2rem;
       color: #fff;
       font-size: 2.4rem; }
+  .menu-open-items .lang {
+    position: absolute;
+    color: #fff;
+    font-size: 2.4rem;
+    padding: 2rem;
+    bottom: 0;
+    left: 0; }
+    .menu-open-items .lang span {
+      padding: 0 1rem; }
+
+.menu-open-items.active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1; }
 
 section {
+  height: 100vh;
   min-height: 80rem;
   padding: 2rem 0; }
 
@@ -2167,6 +2253,8 @@ section {
 .discover-button {
   font-size: 2.4rem;
   font-family: "oswald-bold";
+  background: transparent;
+  border: none;
   text-align: center;
   color: #fff;
   line-height: 1.2;
