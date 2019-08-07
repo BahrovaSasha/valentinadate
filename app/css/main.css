@@ -2048,6 +2048,10 @@ button {
       width: 100%;
       height: 100%;
       fill: #FF5B51; }
+    @media only screen and (max-width: 768px) {
+      .preloader .logo-wrap {
+        width: 40rem;
+        height: 30rem; } }
 
 @-webkit-keyframes opacity {
   0% {
@@ -2076,61 +2080,81 @@ button {
   height: 10rem;
   padding: 0 2rem;
   z-index: 100; }
+  @media only screen and (max-width: 576px) {
+    .main-header {
+      height: 20rem; } }
   .main-header .logo-wrap {
     display: block;
-    height: 8rem;
+    height: 9rem;
     width: 20rem;
     visibility: hidden; }
-  .main-header .phone {
-    font-size: 2.4rem;
-    line-height: normal;
-    padding: 0 4rem; }
-  .main-header .burger-menu {
-    overflow: visible;
-    margin: 0;
-    padding: 1rem;
-    -webkit-transition: .3s linear;
-    -o-transition: .3s linear;
-    transition: .3s linear;
-    border: none;
-    background-color: transparent; }
-    .main-header .burger-menu .burger-box {
-      position: relative;
-      display: inline-block;
-      width: 4rem;
-      height: 2.4rem; }
-      .main-header .burger-menu .burger-box .burger-inner {
+    .main-header .logo-wrap svg {
+      width: 100%;
+      height: 100%; }
+
+@media only screen and (max-width: 768px) {
+  .main-header_right {
+    width: 100%;
+    margin-bottom: 2rem; } }
+
+.main-header_right .phone {
+  font-size: 2.4rem;
+  line-height: normal;
+  padding: 0 4rem;
+  white-space: nowrap; }
+  @media only screen and (max-width: 768px) {
+    .main-header_right .phone {
+      padding: 0 2rem; } }
+  @media only screen and (max-width: 350px) {
+    .main-header_right .phone {
+      font-size: 1.6rem; } }
+
+.main-header_right .burger-menu {
+  overflow: visible;
+  margin: 0;
+  padding: 1rem;
+  -webkit-transition: .3s linear;
+  -o-transition: .3s linear;
+  transition: .3s linear;
+  border: none;
+  background-color: transparent; }
+  .main-header_right .burger-menu .burger-box {
+    position: relative;
+    display: inline-block;
+    width: 4rem;
+    height: 2.4rem; }
+    .main-header_right .burger-menu .burger-box .burger-inner {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      -webkit-transition: .3s linear;
+      -o-transition: .3s linear;
+      transition: .3s linear;
+      background-color: #fff;
+      top: 50%;
+      display: block; }
+      .main-header_right .burger-menu .burger-box .burger-inner:before {
+        content: '';
+        display: block;
         position: absolute;
         width: 100%;
         height: 2px;
+        top: -1rem;
+        background-color: #fff;
         -webkit-transition: .3s linear;
         -o-transition: .3s linear;
-        transition: .3s linear;
+        transition: .3s linear; }
+      .main-header_right .burger-menu .burger-box .burger-inner:after {
+        content: '';
+        display: block;
+        position: absolute;
         background-color: #fff;
-        top: 50%;
-        display: block; }
-        .main-header .burger-menu .burger-box .burger-inner:before {
-          content: '';
-          display: block;
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          top: -1rem;
-          background-color: #fff;
-          -webkit-transition: .3s linear;
-          -o-transition: .3s linear;
-          transition: .3s linear; }
-        .main-header .burger-menu .burger-box .burger-inner:after {
-          content: '';
-          display: block;
-          position: absolute;
-          background-color: #fff;
-          width: 100%;
-          height: 2px;
-          bottom: -1rem;
-          -webkit-transition: .3s linear;
-          -o-transition: .3s linear;
-          transition: .3s linear; }
+        width: 100%;
+        height: 2px;
+        bottom: -1rem;
+        -webkit-transition: .3s linear;
+        -o-transition: .3s linear;
+        transition: .3s linear; }
 
 .main-header.active {
   background-color: transparent;
@@ -2199,16 +2223,31 @@ button {
   transition: .3s linear; }
   .menu-open-items ul {
     height: 100%; }
+    @media only screen and (max-width: 576px) {
+      .menu-open-items ul {
+        margin-top: 20rem; } }
     .menu-open-items ul .menu-item {
       color: #fff;
       font-family: "oswald-regular";
       font-size: 3.8rem; }
+      @media only screen and (max-width: 576px) {
+        .menu-open-items ul .menu-item {
+          font-size: 2.4rem; } }
   .menu-open-items .social-links {
-    padding: 2rem; }
+    padding: 2rem;
+    width: 100%; }
+    @media only screen and (max-width: 576px) {
+      .menu-open-items .social-links {
+        padding: 0 2rem 1rem;
+        margin-bottom: 2rem; } }
     .menu-open-items .social-links a {
       padding: 0 2rem;
       color: #fff;
       font-size: 2.4rem; }
+      @media only screen and (max-width: 576px) {
+        .menu-open-items .social-links a {
+          padding: 0 .6rem;
+          font-size: 1.8rem; } }
   .menu-open-items .lang {
     position: absolute;
     color: #fff;
@@ -2218,6 +2257,13 @@ button {
     left: 0; }
     .menu-open-items .lang span {
       padding: 0 1rem; }
+      @media only screen and (max-width: 576px) {
+        .menu-open-items .lang span {
+          padding: 0 .4rem; } }
+    @media only screen and (max-width: 576px) {
+      .menu-open-items .lang {
+        font-size: 1.8rem;
+        bottom: .9rem; } }
 
 .menu-open-items.active {
   display: -webkit-box;
@@ -2227,28 +2273,43 @@ button {
   opacity: 1; }
 
 section {
-  height: 100vh;
   min-height: 80rem;
-  padding: 2rem 0; }
+  padding: 3rem 0; }
 
 .main-section {
   background-color: #FF5B51;
   color: #fff;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   text-align: center;
   overflow: hidden; }
+  @media only screen and (max-width: 576px) {
+    .main-section {
+      min-height: 45rem;
+      padding: 0; } }
   .main-section .main-section-info {
     height: 100%; }
   .main-section .logo-wrap {
     width: 44rem;
+    height: 20rem;
     fill: #fff;
-    margin: 0 auto; }
+    margin-bottom: 2rem; }
+    .main-section .logo-wrap svg {
+      width: 100%;
+      height: 100%; }
+    @media only screen and (max-width: 768px) {
+      .main-section .logo-wrap {
+        width: 24rem;
+        height: 16rem; } }
 
 .h1 {
   font-family: "oswald-regular";
   font-size: 3.8rem;
-  letter-spacing: 4px; }
+  letter-spacing: 4px;
+  line-height: normal; }
+  @media only screen and (max-width: 768px) {
+    .h1 {
+      font-size: 2.4rem; } }
 
 .discover-button {
   font-size: 2.4rem;
