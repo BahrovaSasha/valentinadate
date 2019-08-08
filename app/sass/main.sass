@@ -41,7 +41,7 @@ textarea
 	resize: none
 
 html, body
-	height: 100%
+	height: auto
 	// width: 100%
 
 html
@@ -66,7 +66,7 @@ body
     max-width: 100%
     height: auto
 .fixed
-	position: fixed
+	//position: fixed
 	overflow-y: hidden
 	width: 100%
 .logo-svg
@@ -103,6 +103,9 @@ button
 		@include md
 			width: 40rem
 			height: 30rem
+		@include sm
+			width: 20rem
+			height: 15rem
 
 @keyframes opacity
 	0%
@@ -124,18 +127,22 @@ button
 	padding: 0 2rem
 	z-index: 100
 	@include sm
-		height: 20rem
+		padding: 0 1rem
+		height: 7rem
 	.logo-wrap
 		display: block
 		height: 9rem
 		width: 20rem
 		visibility: hidden
+		@include sm
+			width: 10rem
+			height: 5rem
 		svg
 			width: 100%
 			height: 100%
 .main-header_right
 	@include md
-		width: 100%
+		//width: 100%
 		margin-bottom: 2rem
 
 	.phone
@@ -145,8 +152,11 @@ button
 		white-space: nowrap
 		@include md
 			padding: 0 2rem
-		@include xs
+		@include sm
+			padding: 0 .4rem
 			font-size: 1.6rem
+		@include xs
+			font-size: 1.4rem
 	.burger-menu
 		overflow: visible
 		margin: 0
@@ -191,7 +201,7 @@ button
 					//transition-property: transform
 
 .main-header.active
-	background-color: transparent
+	background-color: #fff
 	color: $accent-color
 	.logo-wrap
 		visibility: visible
@@ -289,9 +299,12 @@ button
 
 
 section
-	//height: 100vh
-	min-height: 80rem
-	padding: 3rem 0
+	height: auto
+	min-height: 60rem
+	padding: 11rem 0
+	@include sm
+		padding: 9rem 0
+
 
 .main-section
 	background-color: $accent-color
@@ -341,6 +354,8 @@ section
 	width: 80%
 	//min-height: 100vh
 	margin: 0 auto
+	@include lg
+		width: 90%
 .services-section
 	//padding-top: 20vh
 .h2
@@ -348,12 +363,17 @@ section
 	line-height: normal
 	font-family: $items-font
 	font-size: 3.8rem
+	text-align: center
 .services-items,
 .achievements-items,
 .about-us-items
 	width: 100%
 	//height: 80vh
 	padding: 8rem 0
+	@include xl
+		padding: 4rem 0 6rem
+	@include sm
+		padding
 .one-service,
 .one-couple
 	text-align: center
@@ -383,14 +403,33 @@ section
 	padding: 1rem 0
 
 .one-couple_photo
-	height: 36rem
+	height: 30rem
 	background-color: #ccc
+	@include xl
+		height: 20rem
+	@include lg
+		height: 16rem
+	@include sm
+		height: 24rem
+	@include xs
+		height: 20rem
 .about-us-section p
 	padding: 2rem 0
 	width: 60%
+	text-align: center
+	@include lg
+		width: 80%
 .about-us-video
 	height: 28rem
 	background-color: #ccc
+	@include xl
+		height: 18rem
+	@include lg
+		height: 14rem
+	@include md
+		height: 16rem
+	@include sm
+		height: 18rem
 .contact-us-stripe
 	height: 10rem
 	background-color: $accent-color
@@ -405,12 +444,17 @@ section
 .main-article-wrap
 	max-width: 80rem
 	width: 90%
+	padding-top: 2rem
 .article-header
 	color: $accent-color
 	font-family: $bold-font
 .main-article-image
-	height: 25rem
+	height: 30rem
 	background-color: #ccc
+	@include md
+		height: 25rem
+	@include sm
+		height: 20rem
 .read-button
 	color: $accent-color
 	font-family: $bold-font
@@ -452,6 +496,34 @@ section
 	height: 48px
 .contact-us-textarea
 	height: 6rem
+.phone-field
+	width: 100%
+	height: 100%
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		left: 106px
+		top: 50%
+		transform: translateY(-50%)
+		width: 0
+		height: 0
+		border-left: 4px solid transparent
+		border-right: 4px solid transparent
+		border-top: 5px solid #000
+		opacity: .6
+	.country-select
+		width: 120px
+		display: block
+		height: 100%
+		padding: 1rem
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+	.contact-us-input
+		width: calc(100% - 120px)
+		padding-left: 1rem
+		border-left: 1px solid #d4d4cf
 
 .contact-us-input
 	width: 100%

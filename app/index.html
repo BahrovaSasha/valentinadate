@@ -6,8 +6,8 @@
     <meta name="description" content="Valentina Date">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="" sizes="16x16" type="image/png">
-    <link rel="apple-touch-icon-precomposed" href="">
+    <link rel="icon" href="img/favicon-02.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon-01.png">
 </head>
 <body>
 
@@ -63,7 +63,7 @@
         </svg>
     </div>
 </div>
-<header class="main-header d-flex align-items-center justify-content-md-between justify-content-center flex-sm-row flex-column-reverse">
+<header class="main-header d-flex align-items-center justify-content-between flex-sm-row">
     <div class="logo-wrap">
         <svg>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
@@ -110,7 +110,7 @@
 </div>
 
 <main>
-    <section class="main-section d-flex align-items-center justify-content-between flex-column">
+    <section class="main-section d-flex align-items-center justify-content-between flex-column" id="main-page">
         <div class="main-section-info d-flex justify-content-center align-items-center flex-column">
             <div class="logo-wrap">
                 <svg>
@@ -169,12 +169,12 @@
                 </div>
                 <p class="item-name">Donny and Oksana</p>
             </div>
-            <!--<div class="one-couple col-md-4">-->
-                <!--<div class="one-couple_photo">-->
-                    <!--<img src="" alt="couple">-->
-                <!--</div>-->
-                <!--<p class="item-name">Donny and Oksana</p>-->
-            <!--</div>-->
+            <div class="one-couple col-md-4">
+                <div class="one-couple_photo">
+                    <img src="" alt="couple">
+                </div>
+                <p class="item-name">Donny and Oksana</p>
+            </div>
         </div>
     </section>
 
@@ -207,7 +207,7 @@
         </div>
 
         <div class="contact-us-stripe d-flex align-items-center justify-content-center">
-            <a href="" >Contact us</a>
+            <a href="#contact" >Contact us</a>
         </div>
     </section>
 
@@ -261,7 +261,10 @@
                     <input type="text" class="contact-us-input" placeholder="Name">
                 </div>
                 <div class="contact-us-field">
-                    <input type="tel" class="contact-us-input" placeholder="Phone number">
+                    <div class="phone-field d-flex">
+                        <input class="country-select" placeholder="Country code">
+                        <input type="tel" class="contact-us-input" placeholder="Phone number">
+                    </div>
                 </div>
                 <div class="contact-us-field">
                     <input type="email" class="contact-us-input" placeholder="Email">
