@@ -69,7 +69,7 @@ body
 	//position: fixed
 	overflow-y: hidden
 	width: 100%
-.logo-svg, .services-icons
+.logo-svg, .services-icons, .arrows
 	display: none
 h1, h3, p
 	margin: 0
@@ -364,6 +364,10 @@ section
 	font-family: $items-font
 	font-size: 3.8rem
 	text-align: center
+.item-name
+	padding: 1rem 0
+	color: $accent-color
+	font-family: $items-font
 .services-items,
 .achievements-items,
 .about-us-items
@@ -373,7 +377,7 @@ section
 	@include xl
 		padding: 4rem 0 6rem
 	@include sm
-		padding
+
 .one-service,
 .one-couple
 	text-align: center
@@ -396,12 +400,16 @@ section
 			.service-icon
 				svg
 					fill: #fff
+			.item-name
+				color: #fff
 	&:active
 		.circle-wrap
 			background-color: $accent-color
 			.service-icon
 				svg
 					fill: #fff
+			.item-name
+				color: #fff
 	.service-icon
 		width: 6rem
 		height: 6rem
@@ -409,8 +417,7 @@ section
 			width: 100%
 			height: 100%
 			fill: $accent-color
-.item-name
-	padding: 1rem 0
+
 
 .one-couple_photo
 	height: 30rem
@@ -549,3 +556,63 @@ section
 	font-family: $bold-font
 	border: none
 	color: #fff
+
+//executive personal
+.programs-section
+	//position: relative
+	p
+		padding: 2rem 0
+		width: 60%
+		text-align: center
+		@include lg
+			width: 80%
+.programs-list
+	padding: 3rem 0
+	.program-item
+		padding: 2rem
+		border: 2px rgba(255, 91, 81, .5)
+.back-link
+	position: fixed
+	top: 10rem
+	left: 3rem
+	width: 4rem
+	height: 4rem
+	svg
+		fill: $accent-color
+		width: 100%
+		height: 100%
+
+.program-paragraph-list
+	margin: 0
+	li
+		padding: 1rem 0
+		font-size: 1.6rem
+		&:before
+			content: '❤'
+			color: $accent-color
+			padding-right: 1rem
+.program-detail
+	.detail-header
+		font-family: $bold-font
+	p
+		width: 100%
+		color: $accent-color
+		font-family: $items-font
+		line-height: normal
+		font-size: 1.4rem
+		padding: 1rem 0
+		text-align: left
+
+.program-price
+	color: $accent-color
+	font-family: $bold-font
+	font-size: 2.4rem
+	width: 50%
+.choose-program-button
+	background: $accent-color
+	border: none
+	border-radius: .4rem
+	color: #fff
+	font-family: $items-font
+	font-size: 2.4rem
+	padding: 1rem

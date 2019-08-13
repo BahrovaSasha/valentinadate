@@ -57,4 +57,8 @@ $(document).ready(function(){
         $('body').addClass('fixed');
     });
 
+    $('.item-name').click(function() {
+        $('body').removeClass('fixed');
+    });
+
 });

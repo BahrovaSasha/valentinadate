@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "https://use.fontawesome.com/releases/v5.0.13/css/all.css";
 @font-face {
   font-family: "oswald-bold";
@@ -2081,7 +2082,7 @@ body {
   overflow-y: hidden;
   width: 100%; }
 
-.logo-svg, .services-icons {
+.logo-svg, .services-icons, .arrows {
   display: none; }
 
 h1, h3, p {
@@ -2427,6 +2428,11 @@ section {
   font-size: 3.8rem;
   text-align: center; }
 
+.item-name {
+  padding: 1rem 0;
+  color: #FF5B51;
+  font-family: "oswald-regular"; }
+
 .services-items,
 .achievements-items,
 .about-us-items {
@@ -2460,11 +2466,15 @@ section {
     background-color: rgba(255, 91, 81, 0.8); }
     .one-service:hover .circle-wrap .service-icon svg {
       fill: #fff; }
+    .one-service:hover .circle-wrap .item-name {
+      color: #fff; }
 
 .one-service:active .circle-wrap {
   background-color: #FF5B51; }
   .one-service:active .circle-wrap .service-icon svg {
     fill: #fff; }
+  .one-service:active .circle-wrap .item-name {
+    color: #fff; }
 
 .one-service .service-icon {
   width: 6rem;
@@ -2473,9 +2483,6 @@ section {
     width: 100%;
     height: 100%;
     fill: #FF5B51; }
-
-.item-name {
-  padding: 1rem 0; }
 
 .one-couple_photo {
   height: 30rem;
@@ -2641,3 +2648,65 @@ section {
   font-family: "oswald-bold";
   border: none;
   color: #fff; }
+
+.programs-section p {
+  padding: 2rem 0;
+  width: 60%;
+  text-align: center; }
+  @media only screen and (max-width: 992px) {
+    .programs-section p {
+      width: 80%; } }
+
+.programs-list {
+  padding: 3rem 0; }
+  .programs-list .program-item {
+    padding: 2rem;
+    border: 2px rgba(255, 91, 81, 0.5); }
+
+.back-link {
+  position: fixed;
+  top: 10rem;
+  left: 3rem;
+  width: 4rem;
+  height: 4rem; }
+  .back-link svg {
+    fill: #FF5B51;
+    width: 100%;
+    height: 100%; }
+
+.program-paragraph-list {
+  margin: 0; }
+  .program-paragraph-list li {
+    padding: 1rem 0;
+    font-size: 1.6rem; }
+    .program-paragraph-list li:before {
+      content: '❤';
+      color: #FF5B51;
+      padding-right: 1rem; }
+
+.program-detail .detail-header {
+  font-family: "oswald-bold"; }
+
+.program-detail p {
+  width: 100%;
+  color: #FF5B51;
+  font-family: "oswald-regular";
+  line-height: normal;
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  text-align: left; }
+
+.program-price {
+  color: #FF5B51;
+  font-family: "oswald-bold";
+  font-size: 2.4rem;
+  width: 50%; }
+
+.choose-program-button {
+  background: #FF5B51;
+  border: none;
+  border-radius: .4rem;
+  color: #fff;
+  font-family: "oswald-regular";
+  font-size: 2.4rem;
+  padding: 1rem; }
