@@ -2575,20 +2575,25 @@ section {
   height: 20rem;
   background-color: #ccc; }
 
-.contact-us-section {
+.contact-us-section,
+.contact-us-form-section {
   text-align: center;
   color: #FF5B51;
   font-size: 2.4rem;
   padding: 2rem 0 0;
   min-height: auto; }
-  .contact-us-section p {
+  .contact-us-section p,
+  .contact-us-form-section p {
     padding: 2rem 0;
     line-height: 1.5; }
-  .contact-us-section a {
+  .contact-us-section a,
+  .contact-us-form-section a {
     color: #FF5B51; }
-  .contact-us-section .social-links {
+  .contact-us-section .social-links,
+  .contact-us-form-section .social-links {
     padding: 2rem; }
-    .contact-us-section .social-links a {
+    .contact-us-section .social-links a,
+    .contact-us-form-section .social-links a {
       padding: 0 1rem; }
 
 .contact-us-form-wrap {
@@ -2796,17 +2801,24 @@ section {
   width: 22rem; }
 
 .tour-details-wrap {
-  width: 100%; }
+  width: 100%;
+  padding: 2rem 0; }
+  .tour-details-wrap .star-text {
+    width: 100%;
+    text-align: right; }
 
-.tour-details-item .tour-details-image {
-  width: 5rem;
-  height: 5rem;
-  background-color: #cecece; }
-
-.tour-details-item p {
-  color: #FF5B51;
-  padding: 1rem;
-  font-family: "oswald-regular"; }
+.tour-details-item {
+  padding: 2rem; }
+  .tour-details-item .tour-details-image {
+    width: 5rem;
+    height: 5rem;
+    background-color: #cecece; }
+  .tour-details-item p {
+    color: #FF5B51;
+    padding: 1rem;
+    font-family: "oswald-regular";
+    text-align: center;
+    line-height: 1.2; }
 
 .consultations-info-wrap {
   padding: 4rem 0 2rem; }
