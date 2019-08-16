@@ -2579,7 +2579,8 @@ section {
   text-align: center;
   color: #FF5B51;
   font-size: 2.4rem;
-  padding: 2rem 0 0; }
+  padding: 2rem 0 0;
+  min-height: auto; }
   .contact-us-section p {
     padding: 2rem 0;
     line-height: 1.5; }
@@ -2806,3 +2807,28 @@ section {
   color: #FF5B51;
   padding: 1rem;
   font-family: "oswald-regular"; }
+
+.consultations-info-wrap {
+  padding: 4rem 0 2rem; }
+  .consultations-info-wrap .consultations-photo {
+    height: 40rem;
+    width: 40%;
+    background-color: #EEEEEE; }
+  .consultations-info-wrap p {
+    width: 60%;
+    padding: 0 2rem; }
+
+.consultations-mycontacts {
+  padding: 4rem 0 2rem; }
+  .consultations-mycontacts a {
+    color: #FF5B51;
+    padding: 1rem 2rem;
+    white-space: nowrap; }
+
+.consultations-video {
+  background-color: #eee;
+  width: 50%;
+  height: 30rem; }
+  .consultations-video iframe {
+    width: 100%;
+    height: 100%; }
