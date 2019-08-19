@@ -2820,6 +2820,56 @@ section {
     text-align: center;
     line-height: 1.2; }
 
+.tour-packages {
+  padding: 4rem 0; }
+
+.tour-packages-table {
+  border: 2px solid #cecece;
+  border-radius: .4rem; }
+
+.tour-header-row,
+.tour-row {
+  width: 100%;
+  margin: 0; }
+  .tour-header-row:nth-child(odd),
+  .tour-row:nth-child(odd) {
+    background: #f7f7f7; }
+
+.tour-header-row button {
+  height: 4rem;
+  color: #fff;
+  font-family: "oswald-bold";
+  font-size: 2.4rem;
+  padding: 0;
+  border: none; }
+
+.premium-btn {
+  background-color: #FF5B51;
+  color: #fff; }
+
+.tour-cell-item {
+  border-right: 1px solid #e6e6e6;
+  line-height: 1.2;
+  padding: 1rem;
+  min-height: 6rem; }
+
+.first-cell {
+  font-family: "oswald-regular";
+  color: #FF5B51; }
+  .first-cell p {
+    text-align: left; }
+  .first-cell span {
+    font-size: 1.6rem;
+    color: #323232;
+    font-family: "oswald-light";
+    text-align: left; }
+
+.checked-cell {
+  color: #FF5B51; }
+
+.crossed-cell {
+  color: #e6e6e6; }
+
 .consultations-info-wrap {
   padding: 4rem 0 2rem; }
   .consultations-info-wrap .consultations-photo {
