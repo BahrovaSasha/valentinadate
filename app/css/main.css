@@ -2096,7 +2096,8 @@ li {
   list-style-type: none; }
 
 button {
-  cursor: pointer; }
+  cursor: pointer;
+  border: none; }
   button:focus {
     outline: none; }
 
@@ -2427,6 +2428,9 @@ section {
   font-family: "oswald-regular";
   font-size: 3.8rem;
   text-align: center; }
+  @media only screen and (max-width: 576px) {
+    .h2 {
+      font-size: 2.8rem; } }
 
 .h3 {
   color: #FF5B51;
@@ -2653,6 +2657,13 @@ section {
   height: 100%;
   padding: 1rem; }
 
+.error-message {
+  color: #4e4e4e; }
+
+.accept-message {
+  color: #fff;
+  font-family: "oswald-regular"; }
+
 .send-button {
   background: none;
   text-decoration: underline;
@@ -2660,6 +2671,9 @@ section {
   font-family: "oswald-bold";
   border: none;
   color: #fff; }
+
+.programs-section .h2 {
+  width: 80%; }
 
 .programs-section p {
   padding: 2rem 0;
@@ -2671,6 +2685,12 @@ section {
 
 .programs-list {
   padding: 3rem 0; }
+  @media only screen and (max-width: 768px) {
+    .programs-list {
+      width: 80%; } }
+  @media only screen and (max-width: 576px) {
+    .programs-list {
+      width: 100%; } }
   .programs-list .program-item {
     padding: 2rem;
     border: 2px rgba(255, 91, 81, 0.5); }
@@ -2680,7 +2700,11 @@ section {
   top: 10rem;
   left: 3rem;
   width: 4rem;
-  height: 4rem; }
+  height: 4rem;
+  z-index: 100; }
+  @media only screen and (max-width: 576px) {
+    .back-link {
+      left: 1rem; } }
   .back-link svg {
     fill: #FF5B51;
     width: 100%;
@@ -2734,6 +2758,9 @@ section {
   margin: 2rem 0; }
   .days-nav li {
     padding: 0 1rem; }
+    @media only screen and (max-width: 992px) {
+      .days-nav li {
+        padding: 0 .4rem; } }
 
 .one-day-button {
   background: transparent;
@@ -2745,6 +2772,9 @@ section {
   line-height: normal;
   border-radius: .4rem;
   border: 2px solid #cecece; }
+  @media only screen and (max-width: 576px) {
+    .one-day-button {
+      font-size: 1.4rem; } }
   .one-day-button:hover {
     background-color: #cecece;
     color: #fff; }
@@ -2759,6 +2789,9 @@ section {
   margin: 6rem 0 0;
   background-color: #cecece;
   height: 30rem; }
+  @media only screen and (max-width: 768px) {
+    .day-image {
+      display: none; } }
 
 .day-description {
   display: none;
@@ -2780,8 +2813,10 @@ section {
 .tour-dates-items-wrap {
   padding: 2rem 0; }
 
-.tour-dates-item p {
-  font-size: 1.6rem; }
+.tour-dates-item {
+  margin: 2rem 0; }
+  .tour-dates-item p {
+    font-size: 1.6rem; }
 
 .tour-dates-image {
   background-color: #cecece;
@@ -2837,21 +2872,57 @@ section {
 
 .tour-header-row button {
   height: 4rem;
-  color: #fff;
-  font-family: "oswald-bold";
   font-size: 2.4rem;
   padding: 0;
-  border: none; }
+  cursor: default;
+  border-bottom: 1px solid #cecece;
+  border-right: 1px solid #cecece; }
+  @media only screen and (max-width: 768px) {
+    .tour-header-row button {
+      cursor: pointer; }
+      .tour-header-row button:hover {
+        color: #FF5B51;
+        background-color: rgba(255, 91, 81, 0.2); } }
+
+.basic-btn {
+  background-color: #ccc;
+  color: #fff;
+  font-family: "oswald-bold"; }
+  @media only screen and (max-width: 768px) {
+    .basic-btn {
+      color: #FF5B51;
+      background-color: #fff; } }
 
 .premium-btn {
   background-color: #FF5B51;
-  color: #fff; }
+  color: #fff;
+  font-family: "oswald-bold"; }
+  @media only screen and (max-width: 768px) {
+    .premium-btn {
+      color: #FF5B51;
+      background-color: #fff; } }
+
+.vip-btn {
+  background-color: rgba(255, 91, 81, 0.8);
+  color: #fff;
+  font-family: "oswald-bold"; }
+  @media only screen and (max-width: 768px) {
+    .vip-btn {
+      color: #FF5B51;
+      background-color: #fff; } }
 
 .tour-cell-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   border-right: 1px solid #e6e6e6;
   line-height: 1.2;
   padding: 1rem;
   min-height: 6rem; }
+  @media only screen and (max-width: 768px) {
+    .tour-cell-item:first-child {
+      display: none; } }
 
 .first-cell {
   font-family: "oswald-regular";
@@ -2869,6 +2940,27 @@ section {
 
 .crossed-cell {
   color: #e6e6e6; }
+
+@media only screen and (max-width: 768px) {
+  .tour-packages-table.basic-active .basic-btn {
+    color: #fff;
+    background-color: #FF5B51; }
+  .tour-packages-table.basic-active .tour-cell-item:nth-child(3), .tour-packages-table.basic-active .tour-cell-item:nth-child(4) {
+    display: none; } }
+
+@media only screen and (max-width: 768px) {
+  .tour-packages-table.premium-active .premium-btn {
+    color: #fff;
+    background-color: #FF5B51; }
+  .tour-packages-table.premium-active .tour-cell-item:nth-child(2), .tour-packages-table.premium-active .tour-cell-item:nth-child(4) {
+    display: none; } }
+
+@media only screen and (max-width: 768px) {
+  .tour-packages-table.vip-active .vip-btn {
+    color: #fff;
+    background-color: #FF5B51; }
+  .tour-packages-table.vip-active .tour-cell-item:nth-child(2), .tour-packages-table.vip-active .tour-cell-item:nth-child(3) {
+    display: none; } }
 
 .consultations-info-wrap {
   padding: 4rem 0 2rem; }
