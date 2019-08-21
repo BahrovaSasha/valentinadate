@@ -60,5 +60,22 @@ $(document).ready(function(){
     $('.item-name').click(function() {
         $('body').removeClass('fixed');
     });
+    $('tour-packages-table').removeClass('premium-active');
+    $('.basic-btn').click(function () {
+        $('.tour-packages-table').toggleClass('basic-active');
+        $('.tour-packages-table').removeClass('premium-active');
+        $('.tour-packages-table').removeClass('vip-active');
+    });
+    $('.premium-btn').click(function () {
+        $('.tour-packages-table').toggleClass('premium-active');
+        $('.tour-packages-table').removeClass('vip-active');
+        $('.tour-packages-table').removeClass('basic-active');
+
+    });
+    $('.vip-btn').click(function () {
+        $('.tour-packages-table').toggleClass('vip-active');
+        $('.tour-packages-table').removeClass('premium-active');
+        $('.tour-packages-table').removeClass('basic-active');
+    });
 
 });

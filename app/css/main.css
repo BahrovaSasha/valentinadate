@@ -2977,7 +2977,8 @@ section {
   .consultations-mycontacts a {
     color: #FF5B51;
     padding: 1rem 2rem;
-    white-space: nowrap; }
+    white-space: nowrap;
+    line-height: 1; }
 
 .consultations-video {
   background-color: #eee;
